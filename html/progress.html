@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi progreso | Money Helper®</title>
+    <link rel="stylesheet" href="/css/progress.css">
+    <link rel="icon" type="image/x-icon" href="/media/moneyLogo.png">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a id="aLogo"href="/html/home.html"><img id="imgLogo" src="/media/money__2_-removebg-preview.png" alt=""></a>
+            
+            <div class="greetingGeneral">
+                <h1 id="Header_Title"><span id="Header_Title-Username"></span></h1>
+            </div>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav>
+              <a href="/html/home.html" class="link">
+                <span>Inicio</span>
+              </a>
+              <a href="/html/progress.html" class="link">
+                <span>Mi progreso</span>
+              </a>
+              <a href="/html/communty.html" class="link">
+                <span>Comunidad</span>
+              </a>
+              <a href="/html/sources.html" class="link">
+                <span>Recursos</span>
+              </a>
+              <a href="/html/account.html" class="link">
+                <span>Cuenta</span>
+              </a>
+          
+              <div class="cursor"></div>
+            </nav>
+          </div>
+
+        <div class="userPart">
+            <div class="svgChat">
+                <a href="/html/easter.html"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: msFilter"><circle cx="9.5" cy="9.5" r="1.5"></circle><circle cx="14.5" cy="9.5" r="1.5"></circle><path d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.897 5.515 5 6.934V22l5.34-4.004C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.671 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6-3.589 6-8 6z"></path></svg></a>
+            </div>
+
+            <div class="svgProfile">
+                <a href="/index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: msFilter"><path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path><path d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path></svg></a>
+            </div>
+
+            <a href="/html/account.html">
+                <div class="user">
+                    <h3 id="myName"></h3>
+                    
+                    <div id="imgUserP">
+                        <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png">
+                    </div>
+                    <script>function mostrarImagenesGuardadas2() {
+                          const contenedorImagenes = document.getElementById('imgUserP');
+                          const imagenesGuardadas = JSON.parse(localStorage.getItem('imagenes')) || [];
+
+                          contenedorImagenes.innerHTML = '';
+
+                          if (imagenesGuardadas.length > 0) {
+                              const imagen = document.createElement('img');
+                              imagen.src = imagenesGuardadas[imagenesGuardadas.length - 1];
+                              contenedorImagenes.appendChild(imagen);
+                          } else {
+                              const imagenDefecto = document.createElement('img');
+                              imagenDefecto.src = 'https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png'; 
+                              imagenDefecto.alt = 'Enlace por defecto';
+                              contenedorImagenes.appendChild(imagenDefecto);
+                          }
+                        }
+
+                        mostrarImagenesGuardadas2();</script>
+                </div>
+            </a>
+        </div>
+    </header>  
+    
+    <main>
+        <div class="main-container">
+            <!-- LEFT-CONTAINER -->
+            <div class="left-container container">
+                <div class="menu-box block"> <!-- MENU BOX (LEFT-CONTAINER) -->
+                    <h2 class="titular">Menú</h2>
+                    <ul class="menu-box-menu">
+                        <li>
+                            <a class="menu-box-tab" href="#6"><span class="icon fontawesome-envelope scnd-font-color"></span>Mensages<div class="menu-box-number">24</div></a>                            
+                        </li>
+                        <li>
+                            <a class="menu-box-tab" href="#8"><span class="icon entypo-paper-plane scnd-font-color"></span>Invitaciones<div class="menu-box-number">3</div></a>                            
+                        </li>
+                        <li>
+                            <a class="menu-box-tab" href="#10"><span class="icon entypo-calendar scnd-font-color"></span>Eventos<div class="menu-box-number">5</div></a>                            
+                        </li>
+                        <li>
+                            <a class="menu-box-tab" href="#12"><span class="icon entypo-cog scnd-font-color"></span>Configuracíon de cuenta</a>
+                        </li>
+                        <li>
+                            <a class="menu-box-tab" href="#13"><sapn class="icon entypo-chart-line scnd-font-color"></sapn>Estadísticas</a>
+                        </li>                        
+                    </ul>
+                </div>
+                <div class="donut-chart-block block"> <!-- DONUT CHART BLOCK (LEFT-CONTAINER) -->
+                    <h2 class="titular">Total 💎</h2>
+                    <div class="donut-chart">
+                        <!-- DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+                        <div id="porcion1" class="recorte"><div class="quesito ios" data-rel="21"></div></div>
+                        <div id="porcion2" class="recorte"><div class="quesito mac" data-rel="39"></div></div>
+                        <div id="porcion3" class="recorte"><div class="quesito win" data-rel="31"></div></div>
+                        <div id="porcionFin" class="recorte"><div class="quesito linux" data-rel="9"></div></div>
+                        <!-- END DONUT-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->    
+                        <p class="center-date">OCT<br><span class="scnd-font-color">2024</span></p> 
+                    </div>
+                    <ul class="os-percentages horizontal-list">
+                        <li>
+                            <p class="ios os scnd-font-color">Divisas</p>
+                            <p class="os-percentage">21<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="mac os scnd-font-color">Fondos</p>
+                            <p class="os-percentage">48<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="linux os scnd-font-color">B. Raices</p>
+                            <p class="os-percentage">9<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p class="win os scnd-font-color">Ahorros</p>
+                            <p class="os-percentage">32<sup>%</sup></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line-chart-block block clear"> <!-- LINE CHART BLOCK (LEFT-CONTAINER) -->
+                    <div class="line-chart">
+                      <!-- LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+                        <div class='grafico'>
+                           <ul class='eje-y'>
+                             <li data-ejeY='30'></li>
+                             <li data-ejeY='20'></li>
+                             <li data-ejeY='10'></li>
+                             <li data-ejeY='0'></li>
+                           </ul>
+                           <ul class='eje-x'>
+                             <li>OCT</li>
+                             <li>SEPT</li>
+                             <li>AGO</li>
+                           </ul>
+                             <span data-valor='25'>
+                               <span data-valor='8'>
+                                 <span data-valor='13'>
+                                   <span data-valor='5'>   
+                                     <span data-valor='23'>   
+                                     <span data-valor='12'>
+                                         <span data-valor='15'>
+                                         </span></span></span></span></span></span></span>
+                        </div>
+                        <!-- END LINE-CHART by @kseso https://codepen.io/Kseso/pen/phiyL -->
+                    </div>
+                    <ul class="time-lenght horizontal-list">
+                        <li><a class="time-lenght-btn" href="#14">Semanas</a></li>
+                        <li><a class="time-lenght-btn" href="#15">meses</a></li>
+                        <li><a class="time-lenght-btn" href="#16">Años</a></li>
+                    </ul>
+                    <ul class="month-data clear">
+                        <li>
+                            <p>OCT<span class="scnd-font-color"> 2024</span></p>
+                            <p><span class="entypo-plus increment"> </span>21<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p>SEPT<span class="scnd-font-color"> 2024</span></p>
+                            <p><span class="entypo-plus increment"> </span>48<sup>%</sup></p>
+                        </li>
+                        <li>
+                            <p>AGO<span class="scnd-font-color"> 2024</span></p>
+                            <p><span class="entypo-plus increment"> </span>35<sup>%</sup></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="media block"> <!-- MEDIA (LEFT-CONTAINER) -->
+                    <div id="media-display">
+                    </div>
+                    <div class="media-control-bar">
+                        <a class="media-btn play" href="#23"><span class="fontawesome-play scnd-font-color"></span></a>
+                        <p class="time-passed">4:15 <span class="time-duration scnd-font-color">/ 9:23</span></p>
+                        <a class="media-btn volume" href="#24"><span class="fontawesome-volume-up scnd-font-color"></span></a>
+                        <a class="media-btn resize" href="#25"><span class="fontawesome-resize-full scnd-font-color"></span></a>
+                    </div>
+                </div>
+                <ul class="social horizontal-list block"> <!-- SOCIAL (LEFT-CONTAINER) -->
+                    <li class="facebook"><p class="icon"><span class="zocial-facebook"></span></p><p class="number">248k</p></li>
+                    <li class="twitter"><p class="icon"><span class="zocial-twitter"></span></p><p class="number">30k</p></li>
+                    <li class="googleplus"><p class="icon"><span class="zocial-googleplus"></span></p><p class="number">124k</p></li>
+                    <li class="mailbox"><p class="icon"><span class="fontawesome-envelope"></span></p><p class="number">89k</p></li>
+                </ul>
+            </div>
+
+            <!-- MIDDLE-CONTAINER -->
+            <div class="middle-container container">
+                <div class="profile block"> <!-- PROFILE (MIDDLE-CONTAINER) -->
+
+                    <div id="imagenesGuardadas">
+                        <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png" alt="Foto de perfil">
+                    </div>
+
+                    <h1 id="Header_Title-Username2" style="text-align: center">User</h1>
+                    <div class="profile-description">
+                        <p class="scnd-font-color">Lorem ipsum dolor sit amet consectetuer adipiscing</p>
+                    </div>
+                    <ul class="profile-options horizontal-list">
+                        <li><a class="comments" href="#40"><p><span class="icon fontawesome-comment-alt scnd-font-color"></span>23</li></p></a>
+                        <li><a class="views" href="#41"><p><span class="icon fontawesome-eye-open scnd-font-color"></span>841</li></p></a>
+                        <li><a class="likes" href="#42"><p><span class="icon fontawesome-heart-empty scnd-font-color"></span>49</li></p></a>
+                    </ul>
+                </div>
+                <div class="weather block clear"> <!-- WEATHER (MIDDLE-CONTAINER) -->
+                    <h2 class="titular"><span class="icon entypo-location"></span><strong>PEREIRA-RISARALDA</strong>/RO</h2>
+                    <div class="current-day">
+                        <p class="current-day-date">FRI 29/06</p>
+                        <p class="current-day-temperature">24º<span class="icon-cloudy"></span></p>
+                    </div>
+                    <ul class="next-days">
+                        <li>
+                            <a href="#43">
+                                <p class="next-days-date"><span class="day">SAB</span> <span class="scnd-font-color">29/06</span></p>
+                                <p class="next-days-temperature">25º<span class="icon icon-cloudy scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#44">
+                                <p class="next-days-date"><span class="day">DOM</span> <span class="scnd-font-color">30/06</span></p>
+                                <p class="next-days-temperature">22º<span class="icon icon-cloudy2 scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#45">
+                                <p class="next-days-date"><span class="day">LUN</span> <span class="scnd-font-color">01/07</span></p>
+                                <p class="next-days-temperature">24º<span class="icon icon-cloudy2 scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#46">
+                                <p class="next-days-date"><span class="day">MAR</span> <span class="scnd-font-color">02/07</span></p>
+                                <p class="next-days-temperature">26º<span class="icon icon-cloudy scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="next-days-date"><span class="day">MIE</span> <span class="scnd-font-color">03/07</span></p>
+                                <p class="next-days-temperature">27º<span class="icon icon-sun scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p class="next-days-date"><span class="day">JUE</span> <span class="scnd-font-color">04/07</span></p>
+                                <p class="next-days-temperature">29º<span class="icon icon-sun scnd-font-color"></span></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tweets block"> <!-- TWEETS (MIDDLE-CONTAINER) -->
+                    <h2 class="titular"><span class="icon zocial-twitter"></span>ÚLTIMOS POSTS</h2>
+                    <div class="tweet first">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum nulla quam ne. En <a class="tweet-link" href="#17">@CIAF</a></p>
+                        <p><a class="time-ago scnd-font-color" href="#18">Hace 3 minutos</a></p>
+                    </div>
+                    <div class="tweet">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique placeat fuga quod no <a class="tweet-link" href="#19">#IngSoftware</a></p>
+                        <p><a class="scnd-font-color" href="#20">Hace 6 horas</a></p>
+                    </div>
+                </div> 
+                <ul class="social block"> <!-- SOCIAL (MIDDLE-CONTAINER) -->
+                    <li><a href="#50"><div class="facebook icon"><ion-icon name="logo-facebook"></ion-icon></div><h2 class="facebook titular">COMPARTIR EN FACEBOOK</h2></li></a>
+                    <li><a href="#51"><div class="twitter icon"><ion-icon name="logo-twitter"></ion-icon></div><h2 class="twitter titular">COMPARTIR EN TWITTER</h2></li></a>
+                    <li><a href="#52"><div class="googleplus icon"><ion-icon name="logo-github"></ion-icon></div><h2 class="googleplus titular">COMPARTIR EN GITHUB</h2></li></a>
+                </ul>
+            </div>
+
+            <!-- RIGHT-CONTAINER -->
+            <div class="right-container container">
+                <div class="join-newsletter block"> <!-- JOIN NEWSLETTER (RIGHT-CONTAINER) -->
+                    <h2 class="titular">¡Recibe notificaciones por email!</h2>
+                    <div class="input-container">
+                        <input type="text" placeholder="yourname@gmail.com" class="email text-input">
+                        <div class="input-icon envelope-icon-newsletter"><span class="fontawesome-envelope scnd-font-color"></span></div>
+                    </div>
+                    <a class="subscribe button" href="#21">Suscribirme</a>
+                </div>
+                <div class="account block"> <!-- ACCOUNT (RIGHT-CONTAINER) -->
+                    <h2 class="titular">Inicia Sesíon en otra cuenta</h2>
+                    <div class="input-container">
+                        <input type="text" placeholder="yourname@gmail.com" class="email text-input">
+                        <div class="input-icon envelope-icon-acount"><span class="fontawesome-envelope scnd-font-color"></span></div>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" placeholder="Password" class="password text-input">
+                        <div class="input-icon password-icon"><span class="fontawesome-lock scnd-font-color"></span></div>
+                    </div>
+                    <a class="sign-in button" href="#22">Iniciar Sesión</a>
+                    <p class="scnd-font-color">¿Olvidaste la contraseña?</p>
+                    <a class="fb-sign-in" href="58">
+                        <p><span class="fb-border"><span class="icon zocial-facebook"></span></span>Entrar con Facebook</p>
+                    </a>
+                </div>
+                <div class="loading block"> <!-- LOADING (RIGHT-CONTAINER) -->
+                    <div class="progress-bar downloading"></div>
+                    <p><span class="icon fontawesome-cloud-download scnd-font-color"></span>Descargado...</p>
+                    <p class="percentage">81<sup>%</sup></p>
+                    <div class="progress-bar uploading"></div>
+                    <p><span class="icon fontawesome-cloud-upload scnd-font-color"></span>Subido...</p>
+                    <p class="percentage">43<sup>%</sup></p>
+                </div>
+                <div class="calendar-day block"> <!-- CALENDAR DAY (RIGHT-CONTAINER) -->
+                    <div class="arrow-btn-container">
+                        <a class="arrow-btn left" href="#200"><span class="icon fontawesome-angle-left"></span></a>
+                        <h2 class="titular">MARTES</h2>
+                        <a class="arrow-btn right" href="#201"><span class="icon fontawesome-angle-right"></span></a>
+                    </div>
+                        <p class="the-day">26</p>
+                        <a class="add-event button" href="#27">AÑADIR EVENTO</a>
+                </div>
+                <div class="calendar-month block"> <!-- CALENDAR MONTH (RIGHT-CONTAINER) -->
+                    <div class="arrow-btn-container">
+                        <a class="arrow-btn left" href="#202"><span class="icon fontawesome-angle-left"></span></a>
+                        <h2 class="titular">NOVIEMBRE 2024</h2>
+                        <a class="arrow-btn right" href="#203"><span class="icon fontawesome-angle-right"></span></a>
+                    </div>
+                    <table class="calendar">
+                        <thead class="days-week">
+                            <tr>
+                                <th>S</th>
+                                <th>M</th>
+                                <th>T</th>
+                                <th>W</th>
+                                <th>R</th>
+                                <th>F</th>
+                                <th>S</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><a class="scnd-font-color" href="#100">1</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="scnd-font-color" href="#101">2</a></td>
+                                <td><a class="scnd-font-color" href="#102">3</a></td>
+                                <td><a class="scnd-font-color" href="#103">4</a></td>
+                                <td><a class="scnd-font-color" href="#104">5</a></td>
+                                <td><a class="scnd-font-color" href="#105">6</a></td>
+                                <td><a class="scnd-font-color" href="#106">7</a></td>
+                                <td><a class="scnd-font-color" href="#107">8</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="scnd-font-color" href="#108">9</a></td>
+                                <td><a class="scnd-font-color" href="#109">10</a></td>
+                                <td><a class="scnd-font-color" href="#110">11</a></td>
+                                <td><a class="scnd-font-color" href="#111">12</a></td>
+                                <td><a class="scnd-font-color" href="#112">13</a></td>
+                                <td><a class="scnd-font-color" href="#113">14</a></td>
+                                <td><a class="scnd-font-color" href="#114">15</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="scnd-font-color" href="#115">16</a></td>
+                                <td><a class="scnd-font-color" href="#116">17</a></td>
+                                <td><a class="scnd-font-color" href="#117">18</a></td>
+                                <td><a class="scnd-font-color" href="#118">19</a></td>
+                                <td><a class="scnd-font-color" href="#119">20</a></td>
+                                <td><a class="scnd-font-color" href="#120">21</a></td>
+                                <td><a class="scnd-font-color" href="#121">22</a></td>
+                            </tr>
+                            <tr>
+                                <td><a class="scnd-font-color" href="#122">23</a></td>
+                                <td><a class="scnd-font-color" href="#123">24</a></td>
+                                <td><a class="scnd-font-color" href="#124">25</a></td>
+                                <td><a class="today" href="#125">26</a></td>
+                                <td><a href="#126">27</a></td>
+                                <td><a href="#127">28</a></td>
+                                <td><a href="#128">29</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#129">30</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- end calendar-month block --> 
+            </div> <!-- end right-container -->
+        </div> <!-- end main-container -->
+    </main>
+    
+    <div class="wave">
+        <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 170" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,136L80,116.2C160,96,320,57,480,59.5C640,62,800,108,960,124.7C1120,142,1280,130,1440,104.8C1600,79,1760,40,1920,19.8C2080,0,2240,0,2400,0C2560,0,2720,0,2880,17C3040,34,3200,68,3360,87.8C3520,108,3680,113,3840,121.8C4000,130,4160,142,4320,127.5C4480,113,4640,74,4800,70.8C4960,68,5120,102,5280,96.3C5440,91,5600,45,5760,42.5C5920,40,6080,79,6240,82.2C6400,85,6560,51,6720,34C6880,17,7040,17,7200,19.8C7360,23,7520,28,7680,39.7C7840,51,8000,68,8160,73.7C8320,79,8480,74,8640,82.2C8800,91,8960,113,9120,127.5C9280,142,9440,147,9600,127.5C9760,108,9920,62,10080,48.2C10240,34,10400,51,10560,59.5C10720,68,10880,68,11040,70.8C11200,74,11360,79,11440,82.2L11520,85L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,0L80,2.8C160,6,320,11,480,28.3C640,45,800,74,960,73.7C1120,74,1280,45,1440,31.2C1600,17,1760,17,1920,25.5C2080,34,2240,51,2400,59.5C2560,68,2720,68,2880,68C3040,68,3200,68,3360,56.7C3520,45,3680,23,3840,31.2C4000,40,4160,79,4320,93.5C4480,108,4640,96,4800,99.2C4960,102,5120,119,5280,127.5C5440,136,5600,136,5760,121.8C5920,108,6080,79,6240,70.8C6400,62,6560,74,6720,82.2C6880,91,7040,96,7200,82.2C7360,68,7520,34,7680,42.5C7840,51,8000,102,8160,102C8320,102,8480,51,8640,31.2C8800,11,8960,23,9120,22.7C9280,23,9440,11,9600,17C9760,23,9920,45,10080,51C10240,57,10400,45,10560,48.2C10720,51,10880,68,11040,62.3C11200,57,11360,28,11440,14.2L11520,0L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,17L80,19.8C160,23,320,28,480,31.2C640,34,800,34,960,53.8C1120,74,1280,113,1440,107.7C1600,102,1760,51,1920,36.8C2080,23,2240,45,2400,62.3C2560,79,2720,91,2880,93.5C3040,96,3200,91,3360,99.2C3520,108,3680,130,3840,124.7C4000,119,4160,85,4320,76.5C4480,68,4640,85,4800,82.2C4960,79,5120,57,5280,56.7C5440,57,5600,79,5760,76.5C5920,74,6080,45,6240,53.8C6400,62,6560,108,6720,130.3C6880,153,7040,153,7200,141.7C7360,130,7520,108,7680,85C7840,62,8000,40,8160,36.8C8320,34,8480,51,8640,59.5C8800,68,8960,68,9120,76.5C9280,85,9440,102,9600,93.5C9760,85,9920,51,10080,39.7C10240,28,10400,40,10560,62.3C10720,85,10880,119,11040,113.3C11200,108,11360,62,11440,39.7L11520,17L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path><defs><linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(12, 12, 12, 1)" offset="0%"></stop><stop stop-color="rgba(12, 12, 12, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 150px); opacity:0.7" fill="url(#sw-gradient-3)" d="M0,0L80,11.3C160,23,320,45,480,56.7C640,68,800,68,960,70.8C1120,74,1280,79,1440,85C1600,91,1760,96,1920,96.3C2080,96,2240,91,2400,73.7C2560,57,2720,28,2880,17C3040,6,3200,11,3360,22.7C3520,34,3680,51,3840,68C4000,85,4160,102,4320,93.5C4480,85,4640,51,4800,51C4960,51,5120,85,5280,93.5C5440,102,5600,85,5760,68C5920,51,6080,34,6240,31.2C6400,28,6560,40,6720,36.8C6880,34,7040,17,7200,34C7360,51,7520,102,7680,124.7C7840,147,8000,142,8160,119C8320,96,8480,57,8640,51C8800,45,8960,74,9120,73.7C9280,74,9440,45,9600,39.7C9760,34,9920,51,10080,56.7C10240,62,10400,57,10560,68C10720,79,10880,108,11040,113.3C11200,119,11360,102,11440,93.5L11520,85L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"></path></svg>
+    </div>
+            <footer class="footer">
+                <ul class="social-icon">
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/Xenolfair">
+                      <ion-icon name="logo-github"></ion-icon>
+                    </a></li>
+                  <li class="social-icon__item"><a class="social-icon__link" href="#">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+                </ul>
+                <ul class="menu">
+                  <li class="menu__item"><a class="menu__link" href="/html/home.html">Inicio</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/html/communty.html">Comunidad</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/html/sources.html">Recursos</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/html/account.html">Cuenta</a></li>
+                  <li class="menu__item"><a class="menu__link" href="/css/404.css">Contacto</a></li>
+            
+                </ul>
+                <p>&copy;2024 Money Helper | Todos los derechos reservados</p>
+            </footer>
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/greetingUser.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/userInfo.js"></script>
+</body>
+</html>
