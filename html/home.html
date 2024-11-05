@@ -276,6 +276,30 @@
                 <div id="imagenesGuardadas">
                   <img src="https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png" alt="Foto de perfil">
                 </div>
+                  <script>
+                    function mostrarImagenesGuardadas() {
+                      const contenedorImagenes = document.getElementById('imagenesGuardadas'); // Obtiene el contenedor de imágenes guardadas.
+                      const imagenesGuardadas = JSON.parse(localStorage.getItem('imagenes')) || []; // Recupera las imágenes guardadas.
+                  
+                      contenedorImagenes.innerHTML = ''; // Limpia el contenedor de imágenes.
+                  
+                      // Si hay imágenes guardadas, muestra la última imagen.
+                      if (imagenesGuardadas.length > 0) {
+                          const imagen = document.createElement('img'); // Crea un nuevo elemento de imagen.
+                          imagen.src = imagenesGuardadas[imagenesGuardadas.length - 1]; // Asigna la última imagen guardada como fuente.
+                          contenedorImagenes.appendChild(imagen); // Agrega la imagen al contenedor.
+                      } else {
+                          // Si no hay imágenes guardadas, muestra una imagen por defecto.
+                          const imagenDefecto = document.createElement('img'); // Crea un nuevo elemento de imagen.
+                          imagenDefecto.src = 'https://jobsaca.com.cy/wp-content/uploads/2015/05/icon-user-default.png'; // Asigna la imagen por defecto.
+                          imagenDefecto.alt = 'Enlace por defecto'; // Asigna un texto alternativo a la imagen.
+                          contenedorImagenes.appendChild(imagenDefecto); // Agrega la imagen por defecto al contenedor.
+                      }
+                    }
+                    
+                    // Llama a la función para mostrar las imágenes guardadas al cargar la página.
+                    mostrarImagenesGuardadas();
+                </script>
               </div>
 
               <button type="submit">
